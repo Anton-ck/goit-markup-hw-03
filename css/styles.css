@@ -1,0 +1,268 @@
+:root {
+  --primary-color: #212121;
+  --secondary-color: #757575;
+  --thirdy-color: #fff;
+  --hover-link-color: #2196f3;
+  --logo-color: #2196f3;
+  --gray: #2f303a;
+  --btn-background: #f5f4fa;
+  --primary-font-size: 14px;
+  --secondary-font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+  /* outline: 2px solid tomato; */
+}
+
+.logo {
+  display: flex;
+  margin: 24px 93px 24px 0;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-family: "Raleway";
+  font-size: 26px;
+  line-height: 1.19;
+  /* outline: 2px solid tomato; */
+}
+
+.logo-color {
+  color: var(--logo-color);
+}
+
+.header-navigation-list {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 344px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding-left: 0px;
+}
+
+.link-navigation {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: var(--primary-font-size);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-list-item:not(:last-child) {
+  padding-right: 50px;
+}
+
+.header-contacts {
+  display: flex;
+  /* align-items: center; */
+  padding-left: 0px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.contacts-list:not(:last-child) {
+  padding-right: 50px;
+}
+
+.link-contacts {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: var(--primary-font-size);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.link:focus,
+.link:hover {
+  color: var(--hover-link-color);
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Класс is-active можливо зробити декількома варіантами
+Наприклад:
+.is-active
+a.is-active
+.link-navigation.link.is-active - в данному випадку, сама велика вага
+.header-navigation-list .is-active і так далі :-)
+*/
+
+.link-navigation.is-active {
+  color: var(--hover-link-color);
+}
+
+.order {
+  background-color: var(--gray);
+}
+
+.order-title {
+  color: var(--thirdy-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.order-btn {
+  width: 216px;
+  height: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: var(--secondary-font-size);
+  line-height: 1.88;
+  color: var(--thirdy-color);
+  letter-spacing: 0.06em;
+  background: var(--hover-link-color);
+  border-width: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.benefits-title {
+  visibility: hidden;
+}
+
+.benefits-subtitle {
+  font-weight: 700;
+  font-size: var(--primary-font-size);
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.benefits-text {
+  font-size: var(--primary-font-size);
+  line-height: 1.71;
+  color: var(--secondary-color);
+}
+
+.doit-subtitle,
+.team-subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: var(--secondary-font-size);
+  line-height: 1.19;
+}
+
+.team-profession {
+  font-size: var(--secondary-font-size);
+  line-height: 1.19;
+  color: var(--secondary-color);
+}
+
+.footer {
+  background-color: var(--gray);
+}
+
+.footer > .logo {
+  color: var(--thirdy-color);
+}
+
+.footer-contacts {
+  font-size: var(--primary-font-size);
+  line-height: 1.71;
+  color: var(--thirdy-color);
+  font-style: normal;
+}
+
+.footer-map {
+  color: var(--thirdy-color);
+}
+
+.footer-link {
+  color: var(--secondary-color);
+}
+
+/*---------portfolio style--------------*/
+.filter-title {
+  visibility: hidden;
+}
+.filter-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: var(--secondary-font-size);
+  line-height: 1.63;
+  color: var(--primary-color);
+  background: var(--btn-background);
+  border-width: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: var(--hover-link-color);
+  color: var(--thirdy-color);
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-color);
+}
+
+.portfolio-text {
+  font-size: var(--secondary-font-size);
+  line-height: 1.88;
+  color: var(--secondary-color);
+}
+
+/* Стилі нижче були зроблені щоб попрактикуватись */
+
+/* Змінюємо синій на чорний в header*/
+
+.header-navigation > .logo:hover .logo-color {
+  color: var(--primary-color);
+}
+
+/* Змінюємо чорний в header, білий в footer на синій   */
+.logo:hover {
+  color: var(--logo-color);
+}
+
+/* Меняем синій на білий footer */
+
+.footer > .logo:hover > .logo-color {
+  color: var(--btn-background);
+}
