@@ -5,6 +5,7 @@
   --hover-link-color: #2196f3;
   --logo-color: #2196f3;
   --gray: #2f303a;
+  --light-gray: #ececec;
   --btn-background: #f5f4fa;
   --primary-font-size: 14px;
   --secondary-font-size: 16px;
@@ -14,6 +15,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-color);
   letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
 }
 
 h1,
@@ -34,22 +39,41 @@ ul {
 
 .container {
   max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin: 0 auto;
-  display: flex;
+}
 
-  /* outline: 2px solid tomato; */
+.section {
+  padding: 94px 0px;
+  outline: 2px solid tomato;
+}
+.centered {
+  text-align: center;
+}
+
+.no-padding {
+  padding-top: 0px;
+}
+
+.header-navigation {
+  display: flex;
 }
 
 .logo {
   display: flex;
-  margin: 24px 93px 24px 0;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 700;
   font-family: "Raleway";
   font-size: 26px;
   line-height: 1.19;
-  /* outline: 2px solid tomato; */
+  outline: 2px solid tomato;
 }
 
 .logo-color {
@@ -59,44 +83,51 @@ ul {
 .header-navigation-list {
   display: flex;
   align-items: center;
-  margin-left: 0px;
-  margin-right: 344px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  padding-left: 0px;
 }
 
+/* .header-navigation-list:not(:last-child) {
+  margin-left: 50px;
+} */
+
 .link-navigation {
+  padding-top: 32px;
+  padding-bottom: 32px;
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 500;
   font-size: var(--primary-font-size);
   line-height: 1.14;
   letter-spacing: 0.02em;
+  outline: 2px solid tomato;
 }
 
-.header-list-item:not(:last-child) {
-  padding-right: 50px;
-}
+/* .header-list-item:not(:last-child) {
+  margin-left: 50px;
+} */
 
 .header-contacts {
   display: flex;
-  /* align-items: center; */
-  padding-left: 0px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.contacts-list {
+  align-items: center;
 }
 
 .contacts-list:not(:last-child) {
-  padding-right: 50px;
+  margin-right: 50px;
 }
 
 .link-contacts {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-color);
   font-weight: 500;
   font-size: var(--primary-font-size);
   line-height: 1.14;
   letter-spacing: 0.02em;
+  outline: 2px solid tomato;
 }
 
 .link:focus,
@@ -108,14 +139,6 @@ ul {
   text-decoration: none;
 }
 
-/* Класс is-active можливо зробити декількома варіантами
-Наприклад:
-.is-active
-a.is-active
-.link-navigation.link.is-active - в данному випадку, сама велика вага
-.header-navigation-list .is-active і так далі :-)
-*/
-
 .link-navigation.is-active {
   color: var(--hover-link-color);
 }
@@ -125,6 +148,8 @@ a.is-active
 }
 
 .order-title {
+  margin-bottom: 40px;
+
   color: var(--thirdy-color);
   font-weight: 900;
   font-size: 44px;
@@ -134,6 +159,8 @@ a.is-active
 }
 
 .order-btn {
+  display: block;
+  margin: 0 auto;
   width: 216px;
   height: 50px;
   font-family: inherit;
@@ -149,11 +176,36 @@ a.is-active
   cursor: pointer;
 }
 
-.benefits-title {
-  visibility: hidden;
+.benefits-title.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.benefits-list {
+  display: flex;
+}
+
+.benefits-item:not(:last-child) {
+  padding-right: 30px;
 }
 
 .benefits-subtitle {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: var(--primary-font-size);
   line-height: 1.14;
@@ -166,11 +218,46 @@ a.is-active
   color: var(--secondary-color);
 }
 
+.doit {
+  margin-top: 0px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
 .doit-subtitle,
 .team-subtitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+}
+
+.doit-item,
+.team-item {
+  margin-right: 30px;
+}
+
+.doit-list {
+  display: flex;
+}
+
+/* .team.section {
+  margin-top: -3px;
+} */
+
+.team-list {
+  display: flex;
+}
+
+/* .team-item img:not(:last-child) {
+  padding-right: 30px;
+} */
+
+.team-item img {
+  margin-bottom: 30px;
 }
 
 .team {
@@ -178,6 +265,7 @@ a.is-active
 }
 
 .team-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: var(--secondary-font-size);
   line-height: 1.19;
@@ -193,15 +281,30 @@ a.is-active
   background-color: var(--gray);
 }
 
-.footer > .logo {
+.footer .logo {
+  display: inline-block;
   color: var(--thirdy-color);
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.footer-adress {
+  padding-bottom: 60px;
+  padding-left: 0px;
 }
 
 .footer-contacts {
+  display: inline-block;
+  padding-bottom: 60px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: var(--primary-font-size);
   line-height: 1.71;
   color: var(--thirdy-color);
   font-style: normal;
+  /* outline: 2px solid tomato; */
+  background-color: tomato;
 }
 
 .footer-map {
