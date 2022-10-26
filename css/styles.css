@@ -423,6 +423,6 @@ ul {
 
 /* Меняем синій на білий footer */
 
-.footer > .logo:hover > .logo-color {
+.footer .logo:hover > .logo-color {
   color: var(--btn-background);
 }
