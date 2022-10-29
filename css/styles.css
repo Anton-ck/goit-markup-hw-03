@@ -51,7 +51,8 @@ ul {
   text-decoration: none;
 }
 
-.link:focus .link:hover {
+.link:focus,
+.link:hover {
   color: var(--hover-link-color);
 }
 
