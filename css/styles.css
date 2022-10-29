@@ -51,13 +51,12 @@ ul {
   text-decoration: none;
 }
 
-.link:focus,
-.link:hover {
+.link:focus .link:hover {
   color: var(--hover-link-color);
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -214,7 +213,7 @@ ul {
 
 .benefits-subtitle {
   margin-bottom: 10px;
-
+  font-size: 14px;
   font-weight: 700;
 
   line-height: 1.14;
@@ -269,11 +268,7 @@ ul {
   background-color: var(--thirdy-color);
 }
 
-/* .team-item img {
-  margin-bottom: 30px;
-} */
-
-.text-container {
+.team-text {
   padding: 30px 0;
 }
 
